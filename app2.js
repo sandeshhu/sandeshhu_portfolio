@@ -82,6 +82,7 @@ const video1 = document[_0x34f5a8(0x199)](_0x34f5a8(0x19b)),
   closeIcon = document[_0x34f5a8(0x19d)](_0x34f5a8(0x1a9)),
   hoverSign = document["querySelector"](_0x34f5a8(0x19c)),
   videoList = [video1, video2, video3];
+function lazyLoadVideos(){videoList.forEach(function(_0x3901a5){const _0x1c5e4d=_0x34f5a8;if(_0x3901a5.dataset.src&&!_0x3901a5.src){_0x3901a5.src=_0x3901a5.dataset.src;delete _0x3901a5.dataset.src;}})}const observer=new IntersectionObserver(function(_0x5e4b8a){_0x5e4b8a.forEach(function(_0x2b8e8d){if(_0x2b8e8d.isIntersecting){lazyLoadVideos();observer.disconnect();}})});videoList.forEach(function(_0x3901a5){observer.observe(_0x3901a5);});
 videoList["forEach"](function (_0x3901a5) {
   const _0x1c5e4d = _0x34f5a8;
   _0x3901a5[_0x1c5e4d(0x1ad)](_0x1c5e4d(0x19f), function () {
