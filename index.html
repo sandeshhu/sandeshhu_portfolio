@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-    <link rel="preload" as="video" href="videos/blackhole.mp4" type="video/mp4">
-    <link rel="preload" as="video" href="videos/galaxy.mp4" type="video/mp4">
     <link rel="preload" as="video" href="videos/hero-video.mp4" type="video/mp4">
 </head>
 
@@ -47,7 +45,7 @@
                 <h1>Providing <span class="gradient">the best</span> project <span class="gradient">experiance</span>
                 </h1>
                 <p>I'm Full-Stack developer with Experince in website,mobile and Software development. Check out my
-                    skills.</p><button><i class="ri-send-plane-2-fill"></i>Contact Me</button>
+                    skills.</p><button><a href="#formSub">Contact Me</a></button>
             </div>
             <div class="hero-vid"><video class="autoBlur" autoplay muted plays-inline loop src="videos/hero-video.mp4"
                     type="video/mp4"></video></div>
@@ -84,7 +82,7 @@
             <h1 class="section-title autoDisplay">My Projects 👨‍💻</h1>
             <div class="project-card">
                 <div class="project-vidbox autoBlur"><video loop id="projectVideo1"
-                        src="videos/VID_20250805110349.mp4"></video>
+                        data-src="videos/VID_20250805110349.mp4" loading="lazy"></video>
                     <div class="hover-sign"></div>
                 </div>
                 <div class="project-info fadein-left">
@@ -97,7 +95,7 @@
             </div>
             <div class="project-card">
                 <div class="project-vidbox autoBlur"><video loop muted id="projectVideo2"
-                        src="videos/project2.mp4"></video></div>
+                        data-src="videos/project2.mp4" loading="lazy"></video></div>
                 <div class="project-info fadein-left">
                     <h1>Modern <span class="gradient">Portfolio</span> Website</h1>
                     <p>A modern portfolio website showcasing my skills, projects, and contact information with
@@ -106,7 +104,7 @@
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-vidbox autoBlur"><video loop id="projectVideo3" src="videos/project3.mp4"></video>
+                <div class="project-vidbox autoBlur"><video loop id="projectVideo3" data-src="videos/project3.mp4" loading="lazy"></video>
                 </div>
                 <div class="project-info fadein-left">
                     <h1>Movie <span class="gradient">Landing</span> Page</h1>
@@ -156,14 +154,15 @@
                             class="ri-instagram-line"></i></a> <a href="https://github.com/sandeshhu"><i
                             class="ri-github-fill"></i></a></div>
             </div>
-            <div class="contact-box autoBlur">
+            <div id="formSub" class="contact-box autoBlur">
                 <form action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key"
-                        value="706156dc-b3d2-4767-887b-7c2c383ad1b3">
+                        value="706156dc-b3d2-4767-887b-7c2c383ad1b3"><input type="hidden" name="to"
+                        value="sandeshhulawale23@gmail.com">
                     <p>Wheter you're looking to build a new website, improve your existing platform, or bring a unique
                         project to file. i'm here to help.</p>
-                    <p>Full Name</p><input placeholder="Your Full name" type="full name" required>
-                    <p>Email Address</p><input placeholder="Your Email" type="Contact" required>
-                    <p>Your Message</p><input class="input-message" type="contact" placeholder="shaire your thoughts..."
+                    <p>Full Name</p><input name="name" placeholder="Your Full name" type="text" required>
+                    <p>Email Address</p><input name="email" placeholder="Your Email" type="email" required>
+                    <p>Your Message</p><input name="message" class="input-message" type="text" placeholder="shaire your thoughts..."
                         required> <button>Send Message <i class="bx bx-mail-send"></i></button>
                 </form>
             </div>
@@ -172,9 +171,9 @@
             <h1>©️2025, Made with ❤️ by Sandesh</h1>
         </section>
     </div>
-    <script src="app2.js"></script><!-- <script src="app.js"></script> -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>AOS.init()</script>
+    <script src="app2.js" defer></script><!-- <script src="app.js"></script> -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+    <script defer>AOS.init()</script>
 </body>
 
 </html>
